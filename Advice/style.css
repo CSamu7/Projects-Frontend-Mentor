@@ -1,0 +1,151 @@
+*, *::after, *::before{
+  box-sizing: border-box;
+}
+
+:root{
+  /*Primary Colors*/
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+
+  /*Neutral Colors*/
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+
+  /*Font Styles*/
+  --font-monrope: 'Manrope', sans-serif;
+}
+
+body{
+  margin: 0;
+  font-family: var(--font-monrope);
+}
+
+.root{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+
+  background-color: var(--dark-blue);
+}
+
+.card{
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  width: clamp(300px, 40%, 550px);
+  height: 350px;
+  padding-top: 40px;
+
+  background-color: var(--dark-grayish-blue);
+  border-radius: 15px;
+}
+
+@media (max-width: 1000px){
+  .card{
+    padding: 25px 0px 0px 0px;
+  }
+}
+
+@media (max-width: 667px){
+  .card{
+    height: 315px;
+    margin-top: -120px;
+    width: 93%;
+  }
+}
+
+.card__number{
+  margin-top: 20px;
+  font-size: clamp(.7rem, 1vw, .8rem);
+
+  letter-spacing: .22rem;
+  text-transform: uppercase;
+
+  color: var(--neon-green);
+}
+
+.card__advice{
+  margin: 15px 25px 20px 25px;
+  
+  font-weight: 800;
+  font-size: clamp(1.38rem, calc(1.24rem + 0.82vw), 1.75rem);
+  text-align: center;
+
+  color: var(--light-cyan);
+  opacity: .9;
+}
+
+.card__divisor{
+  position: relative;
+
+  height: 25px;
+  width: 100%;
+
+  background-image: url('/images/pattern-divider-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+@media (max-width: 1200px){
+  .card__divisor{
+    background-image: url('/images/pattern-divider-mobile.svg');
+  }
+}
+
+.card__random{
+  position: absolute;
+  bottom: -30px;
+  
+  height: 65px;
+  width: 65px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background-color: var(--neon-green);
+  cursor: pointer;
+}
+
+.card__random:hover{
+  box-shadow: 0px 0px 20px  var(--neon-green);
+}
+
+.card__dice{
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.card__random:hover .card__dice{
+  animation-name: moveDice;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes moveDice {
+  0%{
+    transform: rotate(0deg);
+  }
+  20%{
+    transform: rotate(73deg);
+  }
+  40%{
+    transform: rotate(146deg);
+  }
+  60%{
+    transform: rotate(219deg);
+  }
+  80%{
+    transform: rotate(292deg);
+  }
+  100%{
+    transform: rotate(365deg);
+  }
+}
