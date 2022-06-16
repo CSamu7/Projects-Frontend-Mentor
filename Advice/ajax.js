@@ -25,4 +25,4 @@ document.addEventListener("click", (e) => {
   }
 })
 
-// getData("https://api.adviceslip.com/advice/37")
+getData("https://api.adviceslip.com/advice")

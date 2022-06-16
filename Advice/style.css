@@ -88,14 +88,14 @@ body{
   height: 25px;
   width: 100%;
 
-  background-image: url('/images/pattern-divider-desktop.svg');
+  background-image: url('./images/pattern-divider-desktop.svg');
   background-repeat: no-repeat;
   background-position: 50%;
 }
 
 @media (max-width: 1200px){
   .card__divisor{
-    background-image: url('/images/pattern-divider-mobile.svg');
+    background-image: url('./images/pattern-divider-mobile.svg');
   }
 }
 
