@@ -105,6 +105,11 @@ h1, h2, p{
   margin-bottom: calc(2vh + 5px);
 }
 
+.line{
+  background-color: black;
+  height: .5px;
+}
+
 .financial-state{
   display: flex;
   justify-content: space-between;
