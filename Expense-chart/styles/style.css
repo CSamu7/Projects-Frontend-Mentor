@@ -94,20 +94,15 @@ h1, h2, p{
 }
 
 .spend__title{
-  margin-top: calc(10px - .5vh);
-  font-size: clamp(1.5rem, 2vw, 2rem);
+  margin-top: calc(10px - 1.5vh);
+  font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 .container-canvas{
   height: 200px;
   width: 100%;
-  margin-top: calc(1vh + 5px);
+  margin-top: calc(2vh + 10px);
   margin-bottom: calc(2vh + 5px);
-}
-
-.line{
-  background-color: black;
-  height: .5px;
 }
 
 .financial-state{
@@ -125,17 +120,17 @@ h1, h2, p{
 
 .card__title{
   color: var(--medium-brown);
-  font-size: clamp(1rem, 1vw, 1.2rem);
+  font-size: clamp(1rem, 1vw, 1.3rem);
   font-weight: normal;
 }
 
 .card__money{
-  font-size: clamp(1rem, 1vw, 1.2rem);
+  font-size: clamp(1rem, 1vw, 1.3rem);
   font-weight: 700;
 }
 
 .card__money--big{
-  font-size: clamp(2rem, 2.8vw, 2.3rem);
+  font-size: clamp(2rem, 2.8vw, 2.6rem);
 }
 
 .card--reverse{
