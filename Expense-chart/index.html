@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Frontend Mentor | Expenses chart component</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="container">
+      <header class="header">
+        <div class="balance">
+          <h2 class="balance__title">My balance</h2>
+          <p class="balance__money">$921.48</p>
+        </div>
+        <img src="images/logo.svg" alt="" class="logo">
+      </header>
+      <main class="main">
+        <div class="spend">
+          <h2 class="spend__title">Spending - Last 7 days</h2> 
+          <div class="container-canvas">
+            <canvas id="graph" class="spend__graph" role="img" aria-label="Chart Amount">
+            </canvas>
+          </div>
+          <hr>
+        </div>
+        <section class="financial-state">
+          <article class="card">
+            <h2 class="card__title">Total this month</h2>
+            <p class="card__money card__money--big">$478.33</p>   
+          </article>
+          <article class="card card--reverse">
+            <h2 class="card__title">from last month</h2>
+            <p class="card__money">+2.4%</p>   
+          </article>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
