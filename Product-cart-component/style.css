@@ -1,0 +1,143 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  /*Primary Colors*/
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  /*Neutral Colors*/
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+
+  background-color: var(--cream);
+}
+
+.card {
+  position: relative;
+  background-color: var(--white);
+  font-family: "Monserrat", sans-serif;
+  width: clamp(345px, 70vw, 590px);
+  height: 600px;
+  border-radius: 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 720px) {
+  .card {
+    display: flex;
+    height: 450px;
+  }
+
+  .card > * {
+    flex-basis: 100%;
+  }
+}
+
+.card__img {
+  width: 100%;
+  height: 240px;
+  background: url("images/image-product-mobile.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 12px 12px 0px 0px;
+}
+
+@media (min-width: 720px) {
+  .card__img {
+    height: 100%;
+    border-radius: 12px 0px 0px 12px;
+    background: url("images/image-product-desktop.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+.card__information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px 25px;
+}
+
+.card__type {
+  text-transform: uppercase;
+  color: var(--dark-grayish-blue);
+  letter-spacing: 0.2em;
+  font-size: 0.9rem;
+}
+
+.card__title {
+  font-family: "Fraunces", sans-serif;
+  color: var(--very-dark-blue);
+  line-height: 1.1;
+  font-size: 1.9rem;
+  margin: 0;
+}
+
+.card__prices {
+  display: flex;
+  align-items: center;
+
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.card__price {
+  font-family: "Fraunces", sans-serif;
+  font-size: 2rem;
+  color: var(--dark-cyan);
+}
+
+.card__price-discontinued {
+  text-decoration: line-through;
+  font-size: 0.8rem;
+  margin-left: 20px;
+  vertical-align: middle;
+}
+
+.card__description {
+  color: var(--dark-grayish-blue);
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.button {
+  border: 0;
+  padding: 0px 10px;
+  width: 97%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  gap: 10px;
+
+  color: var(--white);
+  font-family: "Monserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+
+  position: relative;
+  background-color: var(--dark-cyan);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .button:hover {
+    background-color: #1b4d3a;
+  }
+}
